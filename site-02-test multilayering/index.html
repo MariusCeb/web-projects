@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Z-Axis Scrolling Tunnel</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+
+
+  <div class="tunnel">
+    
+    <!-- Section 1: Title -->
+    <div class="tunnel-section" id="section1">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#section1">Home</a></li>
+          <li><a href="#section2">About</a></li>
+          <li><a href="#section3">Gallery</a></li>
+          <li><a href="#section4">Contact</a></li>
+        </ul>
+      </nav>
+      <h1 class="title">Welcome to Space Blog</h1>
+    </div>
+
+    <!-- Section 2: Image & Description -->
+    <div class="tunnel-section" id="section2">
+      <div class="content-container">
+        <span class="back-text">&lt; Back</span>
+        <img src="image1.png" alt="Image" class="content-image">
+        <p class="content-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 3: Image Carousel -->
+<div class="tunnel-section" id="section3">
+  <span class="back-text">&lt; Back</span>
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="image1.png" class="carousel-img">
+      <img src="image2.png" class="carousel-img">
+      <img src="image3.png" class="carousel-img">
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+</div>
+
+
+    <!-- Section 4: Footer -->
+    <div class="tunnel-section" id="section4">
+      <span class="back-text">&lt; Back</span>
+      <footer>
+        <p>&copy; 2025 My Website. All Rights Reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    font-family: 'Michroma', sans-serif;
+    line-height: 1.6; /* Improve text flow */
+    letter-spacing:8px;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap:60px;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f39c12;
+}
+
+/* Tunnel container */
+.tunnel {
+    position: relative;
+    height: 100vh;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+/* Sections */
+.tunnel-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid black;
+    transform-origin: center center;
+    transition: transform 0.5s ease-out, opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Initial Z positions */
+#section1 { 
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.8);
+    transform: translateZ(0); 
+} 
+#section2 { 
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.8);
+    transform: translateZ(-1000px); 
+}
+#section3 { 
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.8);
+    transform: translateZ(-2000px); 
+}
+#section4 { 
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.8);
+    transform: translateZ(-3000px); 
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {  /* Tablets */
+    .tunnel {
+        perspective: 900px;
+    }
+    .tunnel-section {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {  /* Small tablets & large phones */
+    .tunnel {
+        perspective: 800px;
+    }
+    .tunnel-section {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {  /* Mobile phones */
+    .tunnel {
+        perspective: 600px;
+    }
+    .tunnel-section {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+}
+
+/* Section 1: Title */
+.title {
+    letter-spacing: 15px; /* Adjust spacing for better readability */
+    line-height: 1.6; /* Improve text flow */
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    text-align: left;
+}
+
+/* Section 2: Image & Description */
+.content-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-left:18%;
+}
+
+.content-image {
+    width: 600px; /* Ensures the image fills the container width */
+    height: 600px; /* Set a fixed height (change as needed) */
+    object-fit: cover; /* Ensures the image scales properly without distortion */
+}
+
+
+
+.content-description {
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+/* Section 3: Carousel */
+/* Carousel Container */
+.carousel {
+    position: relative;
+    width: 60%;
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The image wrapper (holds all images) */
+.carousel-images {
+    display: flex;
+    width: 300%; /* If you have 3 images, make it 3x */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual carousel images */
+.carousel-img {
+    width: 100%;
+    flex: 1 0 100%; /* Ensures each image takes full width */
+}
+
+/* Carousel Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: black;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Section 4: Footer */
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+
+
+/* Clickable Back Text */
+.back-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease, transform 0.2s ease-in-out;
+    margin-left:2%;
+    margin-top:1%;
+}
+
+.back-text:hover {
+    opacity: 0.7;
+    transform: translateX(-5px);
+}
