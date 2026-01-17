@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donkey Joe</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+</head>
+<body>
+  <!-- Nav -->
+  <nav>
+    <div class="logo">
+      <a href="#">Donkey Joe</a>
+    </div>
+    <div class="nav-items">
+      <a href="#home">Home</a>
+      <a href="#gallery">Galleria</a>
+      <a href="#location">Posizione</a>
+      <a href="#menu">Menu</a>
+    </div>
+    <div class="contact">
+      <a href="#contact">Contattaci</a>
+    </div>
+    <div class="mobile-menu-toggle" aria-label="Apri menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" aria-hidden="true">
+    <a href="#home">Home</a>
+    <a href="#gallery">Galleria</a>
+    <a href="#location">Posizione</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contattaci</a>
+  </div>
+
+  <!-- HERO (kept for animation hooks) -->
+  <div class="container" id="home">
+    <div class="background-image">
+      <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=2000&auto=format&fit=crop" alt="">
+    </div>
+
+    <div class="items">
+      <div class="items-col">
+        <div class="item-main">
+          <div class="item-img">
+            <img src="donkey.png" alt="Donkey Joe Pub" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated title -->
+    <div class="header">
+      <div class="header-item header-item-1">
+        <div class="letter"><div class="letter-wrapper">B</div></div>
+        <div class="letter"><div class="letter-wrapper">E</div></div>
+        <div class="letter"><div class="letter-wrapper">N</div></div>
+        <div class="letter"><div class="letter-wrapper">V</div></div>
+        <div class="letter"><div class="letter-wrapper">E</div></div>
+        <div class="letter"><div class="letter-wrapper">N</div></div>
+        <div class="letter"><div class="letter-wrapper">U</div></div>
+        <div class="letter"><div class="letter-wrapper">T</div></div>
+        <div class="letter"><div class="letter-wrapper">I</div></div>
+      </div>
+      <div class="header-item header-item-2">
+        <div class="letter"><div class="letter-wrapper">A</div></div>
+        <div class="letter"><div class="letter-wrapper">L</div></div>
+      </div>
+    </div>
+
+    <!-- Sub copy + CTA -->
+    <div class="hero-overlay">
+      <p class="hero-kicker">Beer • Pinse • Music</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#gallery"><i class="fa-regular fa-images"></i> Galleria</a>
+        <a class="btn btn-ghost" href="#menu"><i class="fa-solid fa-utensils"></i> Menu</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <section class="gallery-section" id="gallery">
+    <h2 class="section-title">Galleria del Pub</h2>
+    <p class="section-lead">Atmosfera calda, birre artigianali e serate con musica: uno sguardo al nostro locale.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1600&q=80" alt="Pub Interior">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1600&q=80" alt="Craft Beer">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1600&q=80" alt="Pub Food">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1600&q=80" alt="Live Music">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1600&q=80" alt="Outdoor Seating">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1600&q=80" alt="Special Events">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1600&q=80" alt="Special Moments">
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="location-section" id="location">
+    <h2 class="section-title" style="color:#f0e5c8;">Ci puoi trovare:</h2>
+    <div class="location-container">
+      <div class="map-container">
+        <iframe
+          title="Mappa Donkey Joe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5698.604519214017!2d12.210243376562737!3d44.426961702043485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477dfbc56df9d373%3A0xbda41e1ca0f84561!2sDonkey%20Joe!5e0!3m2!1sit!2sit!4v1759877679694!5m2!1sit!2sit"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="info-container">
+        <h3 class="info-title">Donkey Joe</h3>
+        <div class="info-item card">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="info-text">
+            <h3>Indirizzo</h3>
+            <p>Via Argiro Castro 26, Ravenna</p>
+          </div>
+        </div>
+        <div class="info-item card">
+          <i class="fas fa-clock"></i>
+          <div class="info-text">
+            <h3>Orari di apertura</h3>
+            <p>Lunedì - Chiuso · Mar-Dom 18:00 - 01:00</p>
+          </div>
+        </div>
+        <div class="info-item card">
+          <i class="fas fa-phone"></i>
+          <div class="info-text">
+            <h3>Contatto</h3>
+            <p class="contact-line">
+              <span class="label">Telefono:</span>
+              <a href="tel:+39054412345">0544 12345</a>
+              <span class="dot">·</span>
+              <span class="label">Email:</span>
+              <a class="email" href="mailto:info@donkeyjoepub.com">info@donkeyjoepub.com</a>
+            </p>
+          </div>
+        </div>
+        <div class="info-item card">
+          <i class="fas fa-beer"></i>
+          <div class="info-text">
+            <h3>Specialità</h3>
+            <p>Birre di qualità, pinse, drink e musica</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section class="menu-section" id="menu">
+    <h2 class="section-title">Il Nostro Menu</h2>
+    <p class="section-lead">Stiamo aggiornando il menu online. Passa a trovarci per le novità del giorno!</p>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-card__title">Birre alla spina</div>
+        <p>Selezione rotante di artigianali italiane ed estere.</p>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card__title">Pinse</div>
+        <p>Impasto leggero, lunga lievitazione e ingredienti freschi.</p>
+      </div>
+      <div class="menu-card">
+        <div class="menu-card__title">Cocktail</div>
+        <p>Classici e signature con distillati di qualità.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Donkey Joe</h3>
+        <p>Locale gestito interamente da ragazzi che vogliono condividere la propria passione.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Tripadvisor"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Link veloci</h3>
+        <p><a href="#home" class="footer-link">Home</a></p>
+        <p><a href="#gallery" class="footer-link">Galleria</a></p>
+        <p><a href="#location" class="footer-link">Posizione</a></p>
+        <p><a href="#menu" class="footer-link">Menu</a></p>
+      </div>
+      <div class="footer-section">
+        <h3>Informazioni</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Via Argiro Castro 26, Ravenna</p>
+        <p><i class="fas fa-phone"></i> 0544 12345</p>
+        <p><i class="fas fa-envelope"></i> info@donkeyjoepub.com</p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Donkey Joe. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="lb-btn lb-close" aria-label="Chiudi (Esc)"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lb-btn lb-prev" aria-label="Precedente (←)"><i class="fa-solid fa-chevron-left"></i></button>
+    <div class="lb-content">
+      <img id="lightbox-img" alt="" />
+    </div>
+    <button class="lb-btn lb-next" aria-label="Successiva (→)"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lb-counter" id="lightbox-counter" aria-live="polite"></div>
+  </div>
+
+  <!-- GSAP + Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
