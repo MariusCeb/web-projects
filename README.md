@@ -23,7 +23,7 @@ A curated collection of my small web projects (HTML/CSS/JS) built for practice a
 Pick any folder and open `index.html`.
 
 Example:
-1. Open `site-03-flavory/`
+1. Open `site-04-donkey_joe/`
 2. Double-click `index.html`  
 (or use VS Code → Live Server)
 
