@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Info Display</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+
+
+        /* General styles */
+        body {
+            margin: 4%;
+            font-family: 'Press Start 2P', cursive;
+            background-color: #111111;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;  /* Impedisce lo scroll orizzontale */
+            overflow-y: auto;    /* Permette lo scroll verticale */
+        }
+        
+
+        #infoBox {
+            position: fixed;
+            left: 34%; /* Moved slightly to the right */
+            top: 17%;
+            transform: translate(-50%, -50%);
+            font-size: 28px;
+            color: #292929;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Press Start 2P', cursive;
+            white-space: pre-wrap;
+            pointer-events: none;
+            user-select: none;
+            text-align: left;
+            max-width: 90%;
+            word-break: break-word;
+            line-height: 170%;
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+        <div id="infoBox"></div>
+        <script>
+            let cursorX = 0, cursorY = 0;
+    
+            document.onmousemove = function(event) {
+                cursorX = event.clientX;
+                cursorY = event.clientY;
+                refreshDisplay(); // Update immediately when cursor moves
+            };
+    
+            function getTimeInTimeZone(timeZone) {
+                return new Intl.DateTimeFormat('en-US', {
+                    timeZone: timeZone,
+                    hour12: false,
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                }).format(new Date());
+            }
+    
+            function refreshDisplay() {
+                let userAgent = navigator.userAgent;
+                let screenSize = `${window.innerHeight}px ${window.innerWidth}px`;
+                let scrollPos = window.scrollY;
+                let timeItaly = getTimeInTimeZone('Europe/Rome');
+                let timeNY = getTimeInTimeZone('America/New_York');
+                let url = window.location.href;
+                document.getElementById('infoBox').innerText = 
+                    `${userAgent} ${screenSize} ${cursorX}px ${cursorY}px ${scrollPos}px ${timeItaly} ${timeNY} ${url}`;
+            }
+    
+            setInterval(() => {
+                refreshDisplay(); // Update only the time every second
+            }, 1000);
+    
+            window.addEventListener("scroll", function() {
+                let scrollY = window.scrollY;
+                let infoBox = document.getElementById("infoBox");
+                infoBox.style.top = `calc(20% - ${scrollY * 0.1}px)`;
+            });
+            refreshDisplay();
+        </script>
+    
+    </body>
+    </html>
+    
